@@ -1,0 +1,10 @@
+<h1>User List</h1>
+<ul>
+  <% @users.each do |user| %>
+    <div>
+        <div><%= link_to user.name, user_path(user) %> </div>
+        <div> Roll Number: <%= user.roll_no %> </div>
+    </div>
+  <% end %>
+</ul>
+<%= link_to "Add a New User", new_user_path %>
